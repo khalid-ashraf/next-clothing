@@ -1,6 +1,6 @@
 .category_container {
   min-width: 30%;
-  height: 240px;
+  height: 330px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -9,10 +9,6 @@
   margin: 0 7.5px 15px;
   overflow: hidden;
   position: relative;
-}
-
-.category_container:hover {
-  cursor: pointer;
 }
 
 .category_container:hover .background_image {
@@ -55,6 +51,10 @@
   position: absolute;
   opacity: 0.7;
   margin: auto;
+}
+
+.category_body_container:hover {
+  cursor: pointer;
 }
 
 .category_body_container h2 {

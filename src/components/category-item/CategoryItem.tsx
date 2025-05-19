@@ -8,11 +8,18 @@ type CategoryItemProps = {
 
 const CategoryItem = ({ title, imageUrl }: CategoryItemProps) => {
   return (
-    <div className={styles.category_container}>
-      <div className={styles.background_image} style={{ backgroundImage: `url(${imageUrl})` }} />
+    <div className={styles.category_container} role='listbox' aria-labelledby={`category-${title}`}>
+      <div
+        className={styles.background_image}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+        role='img'
+        aria-label={`Background image for ${title}`}
+      />
       <div className={styles.category_body_container}>
         <h2 className='font-semibold text-lg my-2 capitalize'>{title}</h2>
-        <p>Shop Now</p>
+        <button>
+          <p>Shop Now</p>
+        </button>
       </div>
     </div>
   );
